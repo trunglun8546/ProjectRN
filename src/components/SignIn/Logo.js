@@ -8,7 +8,7 @@ export default class Logo extends Component {
         return (
             <View style={styles.container}>
                 <Image source={logoImg} style={styles.image}/>
-                <Text style={styles.text}>REACT NATIVE</Text>
+                <Text style={styles.text}>PROJECT DEMO</Text>
             </View>
         );
     }
@@ -21,8 +21,7 @@ export default class Logo extends Component {
             justifyContent: 'center',
           },
           image: {
-            width: 200,
-            height: 200,
+            
           },
           text: {
             color: 'white',

@@ -14,13 +14,18 @@ export default class Form extends Component {
             showPass: true,
             press: false,
         };
-        // this.showPass = this.showPass.blind(this);
+        this.showPass = this.showPass.bind(this);
     }
 
     showPass() {
-        this.state.press === false
-            ? this.setState({showPass: false, press: true})
-            : this.setState({showPass: true, press: false});
+        if(this.state.press == true){         
+           this.setState({showPass: true});
+           this.setState({press: false});
+        }
+        else{
+            this.setState({showPass: false});
+            this.setState({press: true});
+        }            
     }
 
     render() {
@@ -28,17 +33,13 @@ export default class Form extends Component {
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
                 <UserInput
                     source={usernameImg}
-                    placeholder="Username"
-                    autoCapitalize={'none'}
-                    returnKeyType={'done'}
+                    placeholder="Tài khoản"                    
                     autoCorrect={false}
                 />
                 <UserInput
                     source={passwordImg}
                     secureTextEntry={this.state.showPass}
-                    placeholder="Password"
-                    returnKeyType={'done'}
-                    autoCapitalize={'none'}
+                    placeholder="Mật khẩu"
                     autoCorrect={false}
                 />
                 <TouchableOpacity

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import {StyleSheet, View, TextInput, Image} from 'react-native';
 
 export default class UserInput extends Component {
@@ -22,14 +21,14 @@ export default class UserInput extends Component {
     }
 }
 
-UserInput.PropTypes = {
-    source: PropTypes.number.isRequired,
-    placeholder: PropTypes.string.isRequired,
-    secureTextEntry: PropTypes.bool,
-    autoCorrect: PropTypes.bool,
-    autoCapitalize: PropTypes.string,
-    returnKeyType: PropTypes.string,
-};
+// UserInput.PropTypes = {
+//     source: PropTypes.number.isRequired,
+//     placeholder: PropTypes.string.isRequired,
+//     secureTextEntry: PropTypes.bool,
+//     autoCorrect: PropTypes.bool,
+//     autoCapitalize: PropTypes.string,
+//     returnKeyType: PropTypes.string,
+// };
 
 const styles = StyleSheet.create({
     input: {

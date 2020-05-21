@@ -4,7 +4,6 @@ import {
   TouchableOpacity,
   Text,
   Animated,
-  Easing,
   Image,
   View,
 } from 'react-native';
@@ -31,15 +30,15 @@ export default class ButtonSubmit extends Component {
     if (this.state.isLoading) return;
 
     this.setState({isLoading: true});
-    Animated.timing(this.buttonAnimated, {
-      toValue: 1,
-      duration: 200,
-      easing: Easing.linear,
-    }).start();
+  //  Animated.timing(this.buttonAnimated, {
+  //     toValue: 1,
+  //     duration: 200,
+  //     easing: Easing.linear,
+  //   }).start(); 
 
-    setTimeout(() => {
-      this._onGrow();
-    }, 2000);
+    // setTimeout(() => {
+    //   this._onGrow();
+    // }, 2000);
 
     setTimeout(() => {
       Actions.secondScreen();
@@ -49,13 +48,13 @@ export default class ButtonSubmit extends Component {
     }, 2300);
   }
 
-  _onGrow() {
-    Animated.timing(this.growAnimated, {
-      toValue: 1,
-      duration: 200,
-      easing: Easing.linear,
-    }).start();
-  }
+  // _onGrow() {
+  //   Animated.timing(this.growAnimated, {
+  //     toValue: 1,
+  //     duration: 200,
+  //     easing: Easing.linear,
+  //   }).start();
+  // }
 
   render() {
     const changeWidth = this.buttonAnimated.interpolate({
@@ -77,7 +76,7 @@ export default class ButtonSubmit extends Component {
             {this.state.isLoading ? (
               <Image source={spinner} style={styles.image} />
             ) : (
-              <Text style={styles.text}>LOGIN</Text>
+              <Text style={styles.text}>Đăng nhập</Text>
             )}
           </TouchableOpacity>
           <Animated.View

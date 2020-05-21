@@ -5,7 +5,6 @@ import {
   Image,
   TouchableOpacity,
   Animated,
-  Easing,
 } from 'react-native';
 import {Actions} from 'react-native-router-flux';
 
@@ -30,11 +29,11 @@ export default class SecondScreen extends Component {
 
     this.setState({isLoading: true});
 
-    Animated.timing(this.growAnimated, {
-      toValue: 1,
-      duration: 300,
-      easing: Easing.linear,
-    }).start();
+    // Animated.timing(this.growAnimated, {
+    //   toValue: 1,
+    //   duration: 300,
+    //   easing: Easing.linear,
+    // }).start();
 
     setTimeout(() => {
       Actions.pop();
@@ -55,9 +54,9 @@ export default class SecondScreen extends Component {
           activeOpacity={1}>
           <Image style={styles.image} source={arrowImg} />
         </TouchableOpacity>
-        <Animated.View
+        {/* <Animated.View
           style={[styles.circle, {transform: [{scale: changeScale}]}]}
-        />
+        /> */}
       </View>
     );
   }

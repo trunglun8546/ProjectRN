@@ -41,7 +41,7 @@ export default class Form extends Component {
           Actions.homeScreen();
           this.setState({isLoading: false});
           this.buttonAnimated.setValue(0);
-          Alert.alert('Đăng nhập thành công!', 'Đã đăng nhập hệ thống quyền admin system');
+          // Alert.alert('Đăng nhập thành công!', 'Đã đăng nhập hệ thống quyền admin system');
         }, 50);
         
         }
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
   },
   btnEye: {
     position: 'absolute',
-    top: 70,
+    top: 126,
     right: 410,
   },
   iconEye: {
@@ -143,11 +143,13 @@ const styles = StyleSheet.create({
     zIndex: 100,
     width:500,
     height: 45,
-    marginTop: 60,
+    marginTop: 120,
   },
   text: {
     color: 'white',
     backgroundColor: 'transparent',
+    fontWeight: "700",
+    fontSize:18,
   },
   image: {
     width: 24,
@@ -163,9 +165,11 @@ const styles = StyleSheet.create({
     width: 500,
     fontSize:18,
     marginTop: 20,
+    fontWeight: "700",
+    fontSize:18,
   },
   inputWrapper: {
-    top:-25,
+    top:30,
   },
   inlineImg: {
     position: 'absolute',

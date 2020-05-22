@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     paddingLeft: 45,
     borderRadius: 20,
-    color: '#ffffff',
+    fontWeight: "700",
     width: 500,
     fontSize:18,
     marginTop: 20,
@@ -202,6 +202,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
+    fontSize: 18,
+    fontWeight: "700",
     backgroundColor: 'transparent',
   },
 })

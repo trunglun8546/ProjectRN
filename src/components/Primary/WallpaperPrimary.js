@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import {StyleSheet, 
         ImageBackground} from 'react-native';
-
 import bgSrc from '../images/wallpaper2.png';
 
-export default class Wallpaper extends Component {
+export default class WallpaperPrimary extends Component {
   render() {
     return (
       <ImageBackground style={styles.picture} source={bgSrc}>

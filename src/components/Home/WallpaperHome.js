@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet, ImageBackground} from 'react-native';
-import bgSrc from '../images/wallpaper.png';
+import bgSrc from '../images/wallpaper2.png';
 
 export default class WallpaperHome extends Component {
   render() {

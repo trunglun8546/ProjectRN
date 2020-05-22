@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Router, Scene} from 'react-native-router-flux';
 
 import LoginScreen from './components/SignIn/LoginScreen';
-import SecondScreen from './components/Home/SecondScreen';
+import HomeScreen from './components/Home/HomeScreen';
 import SignUpScreen from './components/SignUp/SignUpScreen';
 
 export default class Main extends Component {
@@ -18,8 +18,8 @@ export default class Main extends Component {
 	          component={SignUpScreen}
 	          hideNavBar={true}
 	        />
-			  <Scene key="secondScreen"
-	          component={SecondScreen}
+			  <Scene key="homeScreen"
+	          component={HomeScreen}
 	          hideNavBar={true}
 	        />
 	      </Scene>

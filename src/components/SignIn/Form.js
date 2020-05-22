@@ -10,8 +10,6 @@ import {StyleSheet,
         TextInput} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 
-import spinner from '../images/loading.gif';
-
 import usernameImg from '../images/username.png';
 import passwordImg from '../images/password.png';
 import eyeImg from '../images/eye_black.png';
@@ -40,15 +38,15 @@ export default class Form extends Component {
         this.setState({isLoading: true});
     
         setTimeout(() => {
-          Actions.secondScreen();
+          Actions.homeScreen();
           this.setState({isLoading: false});
           this.buttonAnimated.setValue(0);
           Alert.alert('Đăng nhập thành công!', 'Đã đăng nhập hệ thống quyền admin system');
-        }, 2300);
+        }, 50);
         
         }
         else {
-            Alert.alert('Thất bại!', 'Xin thử đăng nhập lại');
+            Alert.alert('Thất bại!', 'Sai tài khoản hoặc mật khẩu');
         }
     }
 
@@ -105,12 +103,8 @@ export default class Form extends Component {
                     <TouchableOpacity
                         style={styles.button}
                         onPress={this._onPress}
-                        activeOpacity={1}>
-                        {this.state.isLoading ? (
-                        <Image source={spinner} style={styles.image} />
-                        ) : (
+                        activeOpacity={1}>                    
                         <Text style={styles.text}>Đăng nhập</Text>
-                        )}
                     </TouchableOpacity>
                 </View>
             </KeyboardAvoidingView>
@@ -143,7 +137,7 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#F035E0',
+    backgroundColor: '#215fd0',
     height: MARGIN,
     borderRadius: 20,
     zIndex: 100,

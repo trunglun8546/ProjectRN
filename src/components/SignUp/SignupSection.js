@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text, Animated, TouchableOpacity, Image} from 'react-native';
+import {StyleSheet, 
+        View, 
+        Text, 
+        Animated, 
+        TouchableOpacity} from 'react-native';
 import {Actions} from 'react-native-router-flux';
-import spinner from '../images/loading.gif';
 
 const MARGIN = 200;
 export default class SignupSection extends Component {
@@ -34,20 +37,14 @@ export default class SignupSection extends Component {
         inputRange: [0, 1],
         outputRange: [MARGIN, MARGIN],
       });
-      const changeScale = this.growAnimated.interpolate({
-        inputRange: [0, 1],
-        outputRange: [1, MARGIN],
-      });
-
         return (
             <View style={styles.container}>
-                {/* <Text style={styles.textleft}>Create Password</Text> */}  
                 <Animated.View style={{width: changeWidth}}>         
                 <TouchableOpacity
                   style={styles.textleft}
                   onPress={this._onPress}
                   activeOpacity={1}>                 
-                    <Text style={styles.text}>Create Password</Text>
+                    <Text style={styles.text}>Đăng kí tài khoản</Text>
                 </TouchableOpacity>
                 </Animated.View>   
             </View>
@@ -58,15 +55,17 @@ export default class SignupSection extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    top: 65,
+    top: 10,
     flexDirection: 'row',
     justifyContent: 'space-around',
+    position: 'relative',
   },
   textleft: {
     color: 'white',
     backgroundColor: 'transparent',
     left:-185,
     fontSize:16,
+    marginTop: 40,
   },
   text: {
     color: 'white',

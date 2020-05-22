@@ -4,7 +4,7 @@ import {
   View,
 } from 'react-native';
 
-import Main from './src/components/SignIn/Main';
+import Main from './src/Main';
 
 export default class App extends Component {
   render() {

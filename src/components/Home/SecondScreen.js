@@ -7,6 +7,7 @@ import {
   Animated,
 } from 'react-native';
 import {Actions} from 'react-native-router-flux';
+import WallpaperHome from './WallpaperHome';
 
 import arrowImg from '../images/left-arrow.png';
 
@@ -28,25 +29,14 @@ export default class SecondScreen extends Component {
     if (this.state.isLoading) return;
 
     this.setState({isLoading: true});
-
-    // Animated.timing(this.growAnimated, {
-    //   toValue: 1,
-    //   duration: 300,
-    //   easing: Easing.linear,
-    // }).start();
-
     setTimeout(() => {
-      Actions.pop();
+      Actions.loginScreen();
     }, 500);
   }
 
   render() {
-    const changeScale = this.growAnimated.interpolate({
-      inputRange: [0, 1],
-      outputRange: [1, SIZE],
-    });
-
     return (
+      <WallpaperHome>
       <View style={styles.container}>
         <TouchableOpacity
           onPress={this._onPress}
@@ -54,10 +44,8 @@ export default class SecondScreen extends Component {
           activeOpacity={1}>
           <Image style={styles.image} source={arrowImg} />
         </TouchableOpacity>
-        {/* <Animated.View
-          style={[styles.circle, {transform: [{scale: changeScale}]}]}
-        /> */}
       </View>
+      </WallpaperHome>
     );
   }
 }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Router, Scene} from 'react-native-router-flux';
 
-import LoginScreen from './LoginScreen';
-import SecondScreen from './SecondScreen';
-import SignUpScreen from '../SignUp/SignUpScreen';
+import LoginScreen from './components/SignIn/LoginScreen';
+import SecondScreen from './components/Home/SecondScreen';
+import SignUpScreen from './components/SignUp/SignUpScreen';
 
 export default class Main extends Component {
   render() {
@@ -16,7 +16,7 @@ export default class Main extends Component {
 	        />
 	        <Scene key="signUpScreen"
 	          component={SignUpScreen}
-	          hideNavBar={false}
+	          hideNavBar={true}
 	        />
 			  <Scene key="secondScreen"
 	          component={SecondScreen}

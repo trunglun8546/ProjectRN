@@ -42,8 +42,11 @@ export default class Form extends Component {
           this.setState({isLoading: false});
           this.buttonAnimated.setValue(0);
           // Alert.alert('Đăng nhập thành công!', 'Đã đăng nhập hệ thống quyền admin system');
-        }, 50);
+        }, 400);
         
+        }
+        else if (username == '' && password == '') {
+            Alert.alert('Cảnh báo!', 'Chưa nhập tài khoản hoặc mật khẩu');
         }
         else {
             Alert.alert('Thất bại!', 'Sai tài khoản hoặc mật khẩu');

@@ -4,8 +4,7 @@ import {StyleSheet,
         TouchableOpacity, 
         Text, 
         Animated, 
-        View,
-        ImageBackground} from 'react-native';
+        View} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 
 export default class Form extends Component {
@@ -81,7 +80,7 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#e6e6e6',
+    backgroundColor: '#e4e4e4',
     borderRadius: 0,
     zIndex: 100,
     width:364,
@@ -94,7 +93,7 @@ const styles = StyleSheet.create({
       height: 12,
     },
     shadowOpacity: 0.58,
-    shadowRadius: 16.00,
+    shadowRadius: 20.00,
     elevation: 24,
     borderBottomLeftRadius: 6,
     borderBottomRightRadius: 6,
